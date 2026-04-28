@@ -92,7 +92,10 @@ class Euroc(Sequence):
 
     def load_imu(self, folder):
         imu_data = np.loadtxt(
-            os.path.join(folder, "mav0/imu0/data.csv"), dtype=float, delimiter=","
+            os.path.join(folder, "mav0/imu0/data.csv"), 
+            dtype=float, 
+            delimiter=",",
+            encoding="utf-8-sig" # added this new line
         )
         self.data["time"] = imu_data[:, 0] / 1e9
         self.data["gyro"] = imu_data[:, 1:4]  # w_RS_S_x [rad s^-1],w_RS_S_y [rad s^-1],w_RS_S_z [rad s^-1]
@@ -102,6 +105,7 @@ class Euroc(Sequence):
             os.path.join(folder, "mav0/state_groundtruth_estimate0/data.csv"),
             dtype=float,
             delimiter=",",
+            encoding="utf-8-sig"
         )
         self.data["gt_time"] = gt_data[:, 0] / 1e9
         self.data["pos"] = gt_data[:, 1:4]

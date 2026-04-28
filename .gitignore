@@ -176,10 +176,22 @@ experiments
 
 #wandb
 wandb
-.gitignore
 
 
 #casADI
 *.c 
 *.o
 .nfs*
+
+# Custom experiment outputs
+dataclipping_for_mnn.py
+*.csv
+*.png
+*.jpg
+*.jpeg
+
+# Model weights (usually too large for GitHub)
+*.pth
+*.onnx
+*.weights
+*.h5

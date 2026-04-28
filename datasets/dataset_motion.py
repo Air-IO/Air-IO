@@ -7,6 +7,7 @@ from pyhocon import ConfigFactory
 from .dataset import Sequence, SeqeuncesDataset
 import math
 import pypose as pp
+from datasets.dataset_utils import custom_collate
 
 class SeqeuncesMotionDataset(SeqeuncesDataset):
     def __init__(
@@ -122,7 +123,6 @@ class SeqeuncesMotionDataset(SeqeuncesDataset):
             "vel": self.data["velocity"][:1],
         }
 if __name__ == "__main__":
-    from datasets.dataset_utils import custom_collate
 
     parser = argparse.ArgumentParser()
     parser.add_argument(

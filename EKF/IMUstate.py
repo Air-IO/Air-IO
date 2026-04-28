@@ -7,7 +7,7 @@ from torch.autograd.functional import jacobian
 class IMUstate(pp.module.NLS):
     def __init__(self):
         self.dt = None
-        self.gravity = torch.tensor([0., 0., 9.8107])
+        self.gravity = torch.tensor([0., 0., 9.81007])
         super().__init__()
 
     @property
