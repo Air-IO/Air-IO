@@ -256,14 +256,15 @@ python inference_motion.py --config configs/DATASET_NAME/DATASET_NAME_training_s
 Citation
 --------
 ```
-@misc{qiu2025airiolearninginertialodometry,
-      title={AirIO: Learning Inertial Odometry with Enhanced IMU Feature Observability}, 
-      author={Yuheng Qiu and Can Xu and Yutian Chen and Shibo Zhao and Junyi Geng and Sebastian Scherer},
-      year={2025},
-      eprint={2501.15659},
-      archivePrefix={arXiv},
-      primaryClass={cs.RO},
-      url={https://arxiv.org/abs/2501.15659}, 
+@article{qiu2025airio,
+  title={Airio: Learning inertial odometry with enhanced imu feature observability},
+  author={Qiu, Yuheng and Xu, Can and Chen, Yutian and Zhao, Shibo and Geng, Junyi and Scherer, Sebastian},
+  journal={IEEE Robotics and Automation Letters},
+  volume={10},
+  number={9},
+  pages={9368--9375},
+  year={2025},
+  publisher={IEEE}
 }
 
 ```
